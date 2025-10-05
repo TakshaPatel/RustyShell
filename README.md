@@ -31,3 +31,8 @@ It includes basic shell commands like listing files, changing directories, runni
 3. Run it
    ```bash
    cargo run
+
+---
+## Screenshot:
+
+<img width="1195" height="958" alt="Screenshot 2025-10-05 at 7 29 25 PM" src="https://github.com/user-attachments/assets/d26a213f-1fa4-4407-a7a4-a0cb3a551631" />
