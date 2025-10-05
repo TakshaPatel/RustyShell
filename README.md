@@ -2,7 +2,8 @@
 RustyShell is a minimal, fun, and educational command-line shell written in Rust.  
 It includes basic shell commands like listing files, changing directories, running programs, and more.  
 
-> Note: This is primarily a learning project — it’s not meant to replace Bash, Zsh, or other production shells.
+> Note: This is primarily a learning project — it’s not meant to replace Bash, Zsh, or other production shells. But if you want to replace it, no one is going to stop you
+> Another Note: the run cmd only works on UNIX-based systems
 
 ---
 
