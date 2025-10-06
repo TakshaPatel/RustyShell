@@ -94,7 +94,7 @@ fn main() {
     println!("
 Welcome to RustyShell, A very cool shell.
 
-If you got here by mistake, panic!  Just type 'exit' and carry on.
+If you got here by mistake, start panicking!  Just type 'exit' and carry on.
 
 Type 'help' for a list of commands.
 
