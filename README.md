@@ -35,5 +35,8 @@ It includes basic shell commands like listing files, changing directories, runni
 
 ---
 ## Screenshot:
+<img width="1195" height="977" alt="Screenshot 2025-10-10 at 4 47 23 PM" src="https://github.com/user-attachments/assets/3b07b6bc-9284-4e14-ac1b-cd8fddf8dade" />
 
-<img width="1195" height="958" alt="Screenshot 2025-10-05 at 7 29 25 PM" src="https://github.com/user-attachments/assets/d26a213f-1fa4-4407-a7a4-a0cb3a551631" />
+
+
+pls star
