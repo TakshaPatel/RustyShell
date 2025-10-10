@@ -4,6 +4,7 @@ use std::io::Write;
 use std::fs;
 use std::process::Command;
 use colored::Colorize;
+use system_shutdown::shutdown;
 
 fn cmd_list(_args: &str) {
     for entry in fs::read_dir(".").unwrap() {
@@ -57,6 +58,13 @@ fn cmd_goto(args: &str) {
     }
 }
 
+fn cmd_shutdown(_args: &str) {
+    match shutdown() {
+        Ok(_) => println!("Shutting down, bye!"), // Message if successful
+        Err(error) => eprintln!("Failed to shut down: {}", error), // Message if failed
+    }
+}
+
 
 fn cmd_show(args: &str) {
     if args.is_empty() {
@@ -94,7 +102,7 @@ fn main() {
     println!("
 Welcome to RustyShell, A very cool shell.
 
-If you got here by mistake, start panicking!  Just type 'exit' and carry on.
+If you got here by mistake, Start panicking!  Just type 'exit' and carry on.
 
 Type 'help' for a list of commands.
 
@@ -103,10 +111,10 @@ If you want to customize the look/behavior, there is not a options page, Modify 
 Note: No arrow key support yet : /
     ");
 
-    let cmds = vec!["exit", "l", "show", "goto", "help", "echo", "run", "pwd", "clear"];
+    let cmds = vec!["exit", "l", "show", "goto", "help", "echo", "run", "pwd", "clear", "shutdown"];
 
     loop {
-        print!("{}", format!("RustyShell [{}]> ", path).yellow().bold());
+        print!("{}", format!("RustyShell λ ").green().bold());
         io::stdout().flush().unwrap();
 
         let mut input = String::new();
@@ -133,6 +141,7 @@ Note: No arrow key support yet : /
             "l" => cmd_list(args),
             "pwd" => cmd_pwd(&args),
             "clear" => cmd_clear(args),
+            "shutdown" => cmd_shutdown(args),
             _ => println!("Type help for more information."),
         }
     }
